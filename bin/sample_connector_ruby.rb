@@ -233,7 +233,8 @@ end
 
 def setup_stream
   environment = ThinConnector::Environment.instance
-  url = 'https://stream.gnip.com:443/accounts/isaacs/publishers/twitter/streams/track/prod.json'
+  #Update with your Account Name and Product Label (likely to be 'prod'). Both are case sensitive.
+  url = 'https://stream.gnip.com:443/accounts/<ACCOUNT_NAME>/publishers/twitter/streams/track/<LABEL>.json'
   headers = {
       authorization: [environment.gnip_username, environment.gnip_password],
       'Accept-Encoding' => 'gzip,deflate,sdch'
